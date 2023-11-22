@@ -91,4 +91,8 @@ importer=Importer,
 packer=Packer,
 image_url=Image_URL)
     #return render_template('demo.html')
-app.run(debug=True)
+
+
+if __name__=="__main__":
+    from waitress import serve
+    serve(app,host="0.0.0.0",port=8080)
